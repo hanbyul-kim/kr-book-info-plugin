@@ -148,22 +148,19 @@ const getBookInfoResult = async (bookUrl: string) => {
 				" " +
 				new Date().toTimeString().split(" ")[0].slice(0, 5)
 			}`,
-			tag: `📚독서 ${tag.join(" ")}`,
+			tag: `${tag.join(" ")}`,
 			title: `${title}`,
 			author: `${author.join(", ")}`,
 			category: `${tag[1]}`,
 			total_page: page,
 			publish_date: `${publishDate}`,
 			cover_url: `${coverUrl}`,
-			status: `🟩 완료`,
+			status: `unread`,
 			start_read_date: `${
 				new Date(+new Date() + 3240 * 10000).toISOString().split("T")[0]
 			}`,
-			finish_read_date: `${
-				new Date(+new Date() + 3240 * 10000).toISOString().split("T")[0]
-			}`,
+			finish_read_date: ``,
 			my_rate: 0,
-			book_note: `❌`,
 		};
 
 		const result = `---
